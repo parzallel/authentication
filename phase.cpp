@@ -1,20 +1,6 @@
 #include <iostream>
 #include <ctime>
 
-bool notRobot(int captcha)
-{
-    srand(static_cast<unsigned>(time(0)));
-    int num1 = rand() % 10;
-    int num2 = rand() % 10;
-    bool human = false;
-    int sum = num1 + num2;
-    if (sum == captcha)
-    {
-        human = true;
-    }
-    return human;
-}
-
 void welcome(std::string username)
 {
     std::cout << "Welcome " << username << " !\n";
